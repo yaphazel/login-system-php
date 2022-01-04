@@ -3,7 +3,19 @@
 <?php
 include "connect.php";
 $errors = array("fn" => '', "ln" => '', "un" => '', "em"=> '', "pw"=> '', "pw2"=> '');
-
+$constants = array("fnameval" => '', "lnameval" => '', "unameval" => '', "emailval"=> '');
+if(isset($_POST["fname"])){
+    $constants["fnameval"] = htmlspecialchars($_POST["fname"]);
+}
+if(isset($_POST["lname"])){
+    $constants["lnameval"] = htmlspecialchars($_POST["lname"]);
+}
+if(isset($_POST["uname"])){
+    $constants["unameval"] = htmlspecialchars($_POST["uname"]);
+}
+if(isset($_POST["email"])){
+    $constants["emailval"] = htmlspecialchars($_POST["email"]);
+}
 if (isset($_POST["submit"])){
     if(empty($_POST["fname"])){
         $errors["fn"] = 'Please enter first name.';   
@@ -78,19 +90,19 @@ if (isset($_POST["submit"])){
     <div>
         <form id="SignInContainer" method="POST">
             <label for="fname">First Name</label><br>
-            <input type="text" name="fname" id="fname" placeholder="John"><br>
+            <input type="text" name="fname" id="fname" placeholder="John" value=<?php echo $constants["fnameval"] ?>><br>
             <span><?php echo $errors["fn"] ?></span><br>
 
             <label for="lname">Last Name</label><br>
-            <input type="text" name="lname" id="lname" placeholder="Doe "><br>
+            <input type="text" name="lname" id="lname" placeholder="Doe " value= <?php echo $constants["lnameval"] ?> ><br>
             <span><?php echo $errors["ln"] ?></span><br>
 
             <label for="username">Username</label><br>
-            <input type="text" name="uname" id="uname" placeholder="johndoe"><br>
+            <input type="text" name="uname" id="uname" placeholder="johndoe" value=<?php echo $constants["unameval"]?> ><br>
             <span><?php echo $errors["un"] ?></span><br>
 
             <label for="email">Email Address</label><br>
-            <input type="email" name="email" id="email" placeholder="johndoe@example.com "><br>
+            <input type="email" name="email" id="email" placeholder="johndoe@example.com " value=<?php echo $constants["emailval"] ?>><br>
             <span><?php echo $errors["em"] ?></span><br>
 
             <label for="password">Password</label><br>

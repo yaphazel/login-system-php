@@ -6,10 +6,7 @@
     $unameval = $passval = "";
     $user_valid = FALSE;
     if(isset($_POST["unamelgn"])){
-        $unameval = $_POST["unamelgn"];
-    }
-    if(isset($_POST["passwordlgn"])){
-        $passval = $_POST["passwordlgn"];
+        $unameval = htmlspecialchars($_POST["unamelgn"]);
     }
     if (isset($_POST["submit-lgn"])){
         if(empty($_POST["unamelgn"])){  #empty username
@@ -57,7 +54,7 @@
             <input type="text" name="unamelgn" id="unamelgn" placeholder="johndoe " value=<?php echo $unameval?>><br>
             <span><?php echo $errors["unlgn"]?></span><br>
             <label for="password">Password</label><br>
-            <input type="password" name="passwordlgn" id="passwordlgn" placeholder="abc123" value=<?php echo $passval?>><br>
+            <input type="password" name="passwordlgn" id="passwordlgn" placeholder="abc123"><br>
             <span><?php echo $errors["pwlgn"] ?></span><br>
             <p >Don't have an account? <a href="signup.php"> Sign up now.</a></p>
             <button type="submit" name="submit-lgn" id="submit-lgn">Login<i class="fas fa-arrow-right"></i></button>
