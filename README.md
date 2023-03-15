@@ -19,33 +19,33 @@ Some features of the app include:
 
 ## Recent Updates
 
-###19/12/2021 Update
+### 19/12/2021 Update
 1. Converted of HTML/CSS/JS files to php 
 2. Add sign up page
 3. Add header
 
-###26/12/2021 Update
+### 26/12/2021 Update
 1. Add sign up system => insert user information into database
 2. Add mini mavigation and tasks database
 3. Add signup completion page
  
-###27/12/2021 Update
+### 27/12/2021 Update
 1. Add changeable mini navigation (name/logout <=> login/signup)
 2. Add Logout system - Destruction of sessions
 
-###28/12/2021 Update
+### 28/12/2021 Update
 1. Update CSS of mini navigation
 2. Add task id => Retrieval of user id from database
 3. Add double confirmation password 
 
-###01/01/2022 Update
+### 01/01/2022 Update
 1. Add task database => Link tasks to database 
 
-###02/01/2022 Update
+### 02/01/2022 Update
 1. Update CSS => Fonts & Colors
 2. Add completion status feature => Link completion of tasks to database 
 3. Add deletion feature => Removal of tasks from task
 4. Fix bugs and error checking
 
-###03/01/2022 Update
+### 03/01/2022 Update
 1. Implement final CSS design
